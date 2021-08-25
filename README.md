@@ -14,6 +14,6 @@ You can call me With :
 <ul style="color:red;">
     <li>Email : kazouya25@gmail.com</li>
     <li> WhatsApp : +201067095607 </li>
-    <li> join Telegram Group : <a style="color:chocolate;" href="https://t.me/joinchat/XpmcLN5SPc9kODI0"> 
- </a></li>
+    <li><a style="color:chocolate;" href="https://t.me/joinchat/XpmcLN5SPc9kODI0"> 
+  join Telegram Group</a></li>
 </ul>
