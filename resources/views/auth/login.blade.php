@@ -12,7 +12,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address Or Phone') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
                             <div class="col-md-6">
                                 <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
@@ -24,12 +24,17 @@
 
                             </div>
                         </div> <!-- email or phone  -->
+
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" data-toggle="password" required autocomplete="current-password">
-                                <input type="checkbox" onclick="ShowAndHidePassword()">Show Password
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input text-danger bg-dark" id="customSwitchLogin" type="checkbox" onclick="ShowAndHidePassword()">
+                                      <label class="custom-control-label" for="customSwitchLogin">Show Password</label>
+                                    </div>
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -37,17 +42,6 @@
                                 @enderror
                             </div>
                         </div> <!-- password -->
-
-
-
-
-
-
-
-
-
-
-
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">

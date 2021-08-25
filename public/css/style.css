@@ -1,4 +1,6 @@
+
 * { box-sizing: border-box; }
+
 
 .autocomplete {
   /*the container must be positioned relative:*/
@@ -45,3 +47,17 @@ input[type=submit] {
   background-color: DodgerBlue !important;
   color: #ffffff;
 }
+
+.custom-control-input{
+    cursor: pointer;
+    direction: ltr;
+}
+
+
+
+
+
+
+
+
+

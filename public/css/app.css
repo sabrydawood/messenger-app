@@ -32,6 +32,44 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+
+
+/* my styles  */
+ul {
+    list-style-type: none;
+  }
+.bg-silver{
+    background-color: silver !important;
+}
+.w-85 {
+    width: 85% !important;
+  }
+.w-90 {
+    width: 90% !important;
+  }
+.w-95 {
+    width: 95% !important;
+  }
+.h-85 {
+    height: 85% !important;
+  }
+.h-90 {
+    height: 90% !important;
+  }
+.h-95 {
+    height: 95% !important;
+  }
+
+
+
+
+
+
+
+
+
+
+
 *,
 *::before,
 *::after {
@@ -61,7 +99,17 @@ body {
 }
 
 
+.Icon-inside {
+    position:relative;
+   }
 
+   .Icon-inside span {
+    position:absolute;
+    right:30px;
+    top:12px;
+    color:red;
+    cursor: pointer;
+   }
 
 
 

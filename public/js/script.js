@@ -4,6 +4,20 @@ var countries =["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla",
 $('#password').collapse({
     toggle: false
 })
+
+
+function Rtl(){
+   let site = document.getElementsByTagName('html')[0];
+   if (site.style.direction = "ltr"){
+     site.style.direction = "rtl"
+   }else {
+       site.style.direction = "ltr"
+   }
+}
+
+
+
+
 //dark mode
 function DarkMode() {
     var body = document.body;
@@ -24,7 +38,23 @@ function ShowAndHidePassword() {
     } else {
       x.type = "password";
     }
+};
+//show and hide password
+function ShowAndHideRegisterPassword() {
+    var x = document.getElementById("password");
+    var y = document.getElementById("password-confirm");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+    if(y.type === "password") {
+      y.type = "text";
+    } else {
+      y.type = "password";
+    }
   }
+
 // autocomplete country
 function autocomplete(inp, arr) {
     var currentFocus;
@@ -41,9 +71,9 @@ function autocomplete(inp, arr) {
         for (i = 0; i < arr.length; i++) {
           if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
             b = document.createElement("DIV");
-            // var str = arr[i];
-            // var matches = str.match(/\b(\w)/g);
-            // b.innerHTML = "<h6>" + matches.join('') + "</h6>";
+            var str = arr[i];
+            var matches = str.match(/\b(\w)/g);
+            b.innerHTML = "<h6>" + matches.join('') + "</h6>";
             // b.innerHTML += arr[i].substr(val.length);
             b.innerHTML += "<input type='text' class='form-control' value='" + arr[i] + "'>";
                 b.addEventListener("click", function(e) {

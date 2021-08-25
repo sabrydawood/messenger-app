@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="ltr">
 
 <head>
     <meta charset="utf-8">
@@ -39,9 +39,21 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
-                        <li class="nav-item dropdown">
-<button id="dark" class="nav-link btn btn-outline-danger m-1" onclick="DarkMode()">Dark-Mode</button>
-                          </li>
+                        <li class="nav-item dropdown ml-1 mr-1">
+                            <div class="custom-control custom-switch">
+                                <input class="custom-control-input text-danger bg-dark" id="customSwitchDarkMode" type="checkbox" onclick="DarkMode()">
+                                <label id="dark" class="custom-control-label" for="customSwitchDarkMode">Dark-Mode</label>
+                            </div>
+                        </li> |
+                        <li class="nav-item dropdown ml-1 mr-1">
+
+                            <div class="custom-control custom-switch">
+                                <input class="custom-control-input text-danger bg-dark" id="customSwitcltr" type="checkbox" onclick="Rtl()">
+                                <label id="rtl" class="custom-control-label" for="customSwitcltr">direction</label>
+                            </div>
+
+
+                        </li>
 
                     </ul>
                     <!--end Left Side Of Navbar -->
@@ -107,6 +119,20 @@
    <script src="{{ asset('js/app.js') }}" defer></script>
    <script src="{{ asset('js/script.js') }}" defer></script>
 
+   <footer class="py-5 bg-light text-center">
+
+<h1 class="text-center "> All <i class="fa fa-copyright" aria-hidden="true"></i> Copyright Reserved {{ date('Y') }}</h1>
+<h3 class='text-center' > Powered By Burst Team </h3>
+
+<h3 class="text-left ml-5">Contact Us :</h3>
+ <div class="text-left">
+     <ul >
+        <li> <i class="fab fa-whatsapp text-success"></i> : +201067095607</li>
+        <li> <i class="fab fa-facebook text-primary"></i> : <a href="https://facebook.com/sabry.dawood.79">Sabry Dawood</a></li>
+        <li> <i class="fab fa-telegram text-primary"></i> : <a href="https://t.me/joinchat/XpmcLN5SPc9kODI0">Join Telegram Team Group</a></li>
+    </ul>
+</div>
+   </footer>
 
 </body>
 
