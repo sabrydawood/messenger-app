@@ -22,15 +22,23 @@ You can call me With :
 
 # how to work with it 
  clone the Project
+ # requiremints 
+<ul style="color:red;">
+    <li> laravel 8.x</li>
+    <li> php 8.x</li>
+    <li>composer</li>
+    <li>node 12.x</li>
+</ul>
  
  ```bash
 rename .env.example => .env 
 ```
-and make database on php my admin with name ```bash 
-Burst-App
-```
+and make database on php my admin with name 
+```bash 
+Burst-App ```
 now its done 
 write in teminal 
+
 ```bash
 php artisan serve
 ```
