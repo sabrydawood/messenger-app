@@ -17,3 +17,20 @@ You can call me With :
     <li><a style="color:chocolate;" href="https://t.me/joinchat/XpmcLN5SPc9kODI0"> 
   join Telegram Group</a></li>
 </ul>
+
+
+
+# how to work with it 
+ clone the Project
+ 
+ ```bash
+rename .env.example => .env 
+```
+and make database on php my admin with name ```bash 
+Burst-App
+```
+now its done 
+write in teminal 
+```bash
+php artisan serve
+```
