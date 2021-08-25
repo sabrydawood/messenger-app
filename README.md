@@ -34,8 +34,10 @@ You can call me With :
 rename .env.example => .env 
 ```
 and make database on php my admin with name 
+
 ```bash 
 Burst-App ```
+
 now its done 
 write in teminal 
 
