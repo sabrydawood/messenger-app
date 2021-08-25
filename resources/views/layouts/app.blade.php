@@ -17,6 +17,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -124,8 +125,8 @@
 <h1 class="text-center "> All <i class="fa fa-copyright" aria-hidden="true"></i> Copyright Reserved {{ date('Y') }}</h1>
 <h3 class='text-center' > Powered By Burst Team </h3>
 
-<h3 class="text-left ml-5">Contact Us :</h3>
- <div class="text-left">
+<h3 class="text-center ml-5">Contact Us :</h3>
+ <div class="text-center">
      <ul >
         <li> <i class="fab fa-whatsapp text-success"></i> : +201067095607</li>
         <li> <i class="fab fa-facebook text-primary"></i> : <a href="https://facebook.com/sabry.dawood.79">Sabry Dawood</a></li>

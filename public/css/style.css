@@ -1,63 +1,209 @@
-
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 
 .autocomplete {
-  /*the container must be positioned relative:*/
-  position: relative;
-  display: inline-block;
-}
-input {
-  border: 1px solid transparent;
-  background-color: #f1f1f1;
-  padding: 10px;
-  font-size: 16px;
-}
-input[type=text] {
-  background-color: #f1f1f1;
-  width: 100%;
-}
-input[type=submit] {
-  background-color: DodgerBlue;
-  color: #fff;
-}
-.autocomplete-items {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  border-bottom: none;
-  border-top: none;
-  z-index: 99;
-  /*position the autocomplete items to be the same width as the container:*/
-  top: 100%;
-  left: 0;
-  right: 0;
-}
-.autocomplete-items div {
-  padding: 10px;
-  cursor: pointer;
-  background-color: #fff;
-  border-bottom: 1px solid #d4d4d4;
-}
-.autocomplete-items div:hover {
-  /*when hovering an item:*/
-  background-color: #e9e9e9;
-}
-.autocomplete-active {
-  /*when navigating through the items using the arrow keys:*/
-  background-color: DodgerBlue !important;
-  color: #ffffff;
+    /*the container must be positioned relative:*/
+    position: relative;
+    display : inline-block;
 }
 
-.custom-control-input{
-    cursor: pointer;
+input {
+    border          : 1px solid transparent;
+    background-color: #f1f1f1;
+    padding         : 10px;
+    font-size       : 16px;
+}
+
+input[type=text] {
+    background-color: #f1f1f1;
+    width           : 100%;
+}
+
+input[type=submit] {
+    background-color: DodgerBlue;
+    color           : #fff;
+}
+
+.autocomplete-items {
+    position                                                               : absolute;
+    border                                                                 : 1px solid #d4d4d4;
+    border-bottom                                                          : none;
+    border-top                                                             : none;
+    z-index                                                                : 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top                                                                    : 100%;
+    left                                                                   : 0;
+    right                                                                  : 0;
+}
+
+.autocomplete-items div {
+    padding         : 10px;
+    cursor          : pointer;
+    background-color: #fff;
+    border-bottom   : 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important;
+    color           : #ffffff;
+}
+
+.custom-control-input {
+    cursor   : pointer;
     direction: ltr;
 }
 
+/* bootstarab changes and added  */
+ul {
+    list-style-type: none;
+}
+
+.bg-silver {
+    background-color: silver !important;
+}
+
+.w-85 {
+    width: 85% !important;
+}
+
+.w-90 {
+    width: 90% !important;
+}
+
+.w-95 {
+    width: 95% !important;
+}
+
+.h-85 {
+    height: 85% !important;
+}
+
+.h-90 {
+    height: 90% !important;
+}
+
+.h-95 {
+    height: 95% !important;
+}
+
+
+/*  none */
+.welcome-image {
+    position: relative;
+}
+
+.welcome-image a {
+    position: absolute;
+    right   : 10%;
+}
+
+.welcome-register-link {
+    top: 60%;
+}
+
+.welcome-login-link {
+    top: 75%;
+}
+
+.Icon-inside {
+    position: relative;
+}
+
+.Icon-inside span {
+    position: absolute;
+    right   : 30px;
+    top     : 12px;
+    color   : red;
+    cursor  : pointer;
+}
 
 
 
 
 
+/* animation  */
+@media (max-width: 800px) {
+    .feature .left {
+        width: 100%;
+        -webkit-transform: scale(1) perspective(1000px) rotateX(23deg) rotateY(23deg) rotate(-9.8deg) translateX(20px) translateY(-150px);
+        transform: scale(1) perspective(1000px) rotateX(23deg) rotateY(23deg) rotate(-9.8deg) translateX(20px) translateY(-150px);
+        -moz-transform: scale(1) perspective(1000px) rotateX(23deg) rotateY(23deg) rotate(-9.8deg) translateX(20px) translateY(-150px);
+        -ms-transform: scale(1) perspective(1000px) rotateX(23deg) rotateY(23deg) rotate(-9.8deg) translateX(20px) translateY(-150px);
+        -o-transform: scale(1) perspective(1000px) rotateX(23deg) rotateY(23deg) rotate(-9.8deg) translateX(20px) translateY(-150px);
+}
+}
 
+@media (max-width: 800px) {
+    .feature .right {
+        width: 100%;
+        transform: scale(1) perspective(1000px) rotateX(23deg) rotateY(23deg) rotate(-9.8deg) translateX(20px) translateY(-150px);
+        -webkit-transition: all .2s ease-out;
+        -webkit-transform: scale(1) perspective(1000px) rotateX(23deg) rotateY(23deg) rotate(-9.8deg) translateX(20px) translateY(-150px);
+        -moz-transform: scale(1) perspective(1000px) rotateX(23deg) rotateY(23deg) rotate(-9.8deg) translateX(20px) translateY(-150px);
+        -ms-transform: scale(1) perspective(1000px) rotateX(23deg) rotateY(23deg) rotate(-9.8deg) translateX(20px) translateY(-150px);
+        -o-transform: scale(1) perspective(1000px) rotateX(23deg) rotateY(23deg) rotate(-9.8deg) translateX(20px) translateY(-150px);
+}
+}
 
+.feature .left {
+    margin-bottom: -60%;
+    border-radius: 10px;
+    width: 450px;
+    -webkit-perspective: 484px;
+    perspective: 484px;
+    -webkit-box-shadow: -67.1px 62.5px 125px -25px rgb(9 9 14 / 86%), -16.2px 37.5px 75px -37.5px rgb(6 12 34 / 27%);
+    box-shadow: -67.1px 62.5px 125px -25px rgb(9 9 14 / 86%), -16.2px 37.5px 75px -37.5px rgb(6 12 34 / 27%);
+    transform: scale(1) perspective(1000px) rotateX(23deg) rotateY(23deg) rotate(-9.8deg) translateX(20px) translateY(-150px);
+    transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1.2s ease-out;
+    -webkit-transform: scale(1) perspective(1000px) rotateX(23deg) rotateY(23deg) rotate(-9.8deg) translateX(20px) translateY(-150px);
+    -moz-transform: scale(1) perspective(1000px) rotateX(23deg) rotateY(23deg) rotate(-9.8deg) translateX(20px) translateY(-150px);
+    -ms-transform: scale(1) perspective(1000px) rotateX(23deg) rotateY(23deg) rotate(-9.8deg) translateX(20px) translateY(-150px);
+    -o-transform: scale(1) perspective(1000px) rotateX(23deg) rotateY(23deg) rotate(-9.8deg) translateX(20px) translateY(-150px);
+}
 
+.feature .left:hover {
+    margin-bottom: -60%;
+    border-radius: 10px;
+    width: 450px;
+    -webkit-perspective: 484px;
+    perspective: 484px;
+    -webkit-box-shadow: -67.1px 62.5px 125px -25px rgb(9 9 14 / 86%), -16.2px 37.5px 75px -37.5px rgb(6 12 34 / 27%);
+    box-shadow: -67.1px 62.5px 125px -25px rgb(9 9 14 / 86%), -16.2px 37.5px 75px -37.5px rgb(6 12 34 / 27%);
+    transform: scale(1) perspective(0px) rotateX(0deg) rotateY(0deg) rotate(0deg) translateX(0px) translateY(0px);
+    -webkit-transform:scale(1) perspective(0px) rotateX(0deg) rotateY(0deg) rotate(0deg) translateX(0px) translateY(0px);
+    -moz-transform:scale(1) perspective(0px) rotateX(0deg) rotateY(0deg) rotate(0deg) translateX(0px) translateY(0px);
+    -ms-transform:scale(1) perspective(0px) rotateX(0deg) rotateY(0deg) rotate(0deg) translateX(0px) translateY(0px);
+    -o-transform:scale(1) perspective(0px) rotateX(0deg) rotateY(0deg) rotate(0deg) translateX(0px) translateY(0px);
+    transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1.2s ease-out;
+}
+
+.feature .right {
+    margin-bottom      : -60%;
+    border-radius      : 10px;
+    width              : 450px;
+    -webkit-perspective: 484px;
+    perspective        : 484px;
+    -webkit-box-shadow : 65.1px 62.5px 125px -25px rgb(9 9 14 / 86%), 16.2px 37.5px 75px -37.5px rgb(6 12 34 / 27%);
+    box-shadow         : 67.1px 62.5px 125px -25px rgb(9 9 14 / 86%), 16.2px 37.5px 75px -37.5px rgb(6 12 34 / 27%);
+    -webkit-transform  : scale(1) perspective(1000px) rotateX(23deg) rotateY(-23deg) rotate(15deg) translateX(-35px) translateY(-185px);
+    transform          : scale(1) perspective(1000px) rotateX(23deg) rotateY(-23deg) rotate(15deg) translateX(-35px) translateY(-185px);
+    -webkit-transition : all .2s ease-out;
+    -o-transition      : all .2s ease-out;
+    transition         : all .2s ease-out;
+}
