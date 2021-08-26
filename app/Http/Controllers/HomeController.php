@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Friend;
 
 class HomeController extends Controller
 {
@@ -19,6 +20,8 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user();
-        return view('home', compact('user'));
+        $friends = Friend:: all();
+        
+        return view('home', compact('user' , 'friends'));
     }
 }

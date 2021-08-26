@@ -20,6 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('first_name');
             $table->string('middle_name');
+            $table->json('friend')->nullable();
+            $table->enum('role', ['user','admin'])->default('user');
             $table->string('avatar')->default('https://media.istockphoto.com/vectors/purple-user-icon-in-the-circle-a-solid-gradient-vector-id1095289632?b=1&k=6&m=1095289632&s=170667a&w=0&h=g0fIdNOkwsl_K3q1MuAHs9krp1nXqLJUxv2_b-zIkIQ=');
             $table->string('country')->nullable();
             $table->string('background')->default('https://www.pinclipart.com/picdir/middle/377-3777014_add-team-members-with-multi-user-accounts-multi.png');
@@ -29,14 +31,10 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
+
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('users');

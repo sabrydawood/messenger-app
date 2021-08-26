@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Friend;
 
 class User extends Authenticatable
 {
@@ -18,10 +19,21 @@ class User extends Authenticatable
         'password',
         'country',
         'phone',
+        'role',
         'is_active',
         'is_blocked',
         'preference',
+        'avatar',
+        'background',
+        'friend' => 'array',
     ];
+    public function isAdmin() {
+        return $this->role === 'admin';
+     }
+ 
+     public function isUser() {
+        return $this->role === 'user';
+     }
     protected $hidden = [
         'password',
         'remember_token',
@@ -33,6 +45,6 @@ class User extends Authenticatable
 
     protected function friends()
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany(Friend::class);
     }
 }

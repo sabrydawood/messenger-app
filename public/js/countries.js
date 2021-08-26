@@ -1,4 +1,4 @@
-{
+const countries = {
     "ad": "Andorra",
     "ae": "United Arab Emirates",
     "af": "Afghanistan",

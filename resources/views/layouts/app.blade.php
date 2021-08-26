@@ -23,8 +23,9 @@
 <body>
 
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
             <div class="container">
+                <img src="{{ asset('images/backgrounds/user.jpg') }}" width="100" class="rounded-circle border-0 burst-logo">
 
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -38,29 +39,36 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
 
-                        <li class="nav-item dropdown ml-1 mr-1">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Styles
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
                             <div class="custom-control custom-switch">
                                 <input class="custom-control-input text-danger bg-dark" id="customSwitchDarkMode" type="checkbox" onclick="DarkMode()">
                                 <label id="dark" class="custom-control-label" for="customSwitchDarkMode">Dark-Mode</label>
                             </div>
-                        </li> |
-                        <li class="nav-item dropdown ml-1 mr-1">
 
                             <div class="custom-control custom-switch">
                                 <input class="custom-control-input text-danger bg-dark" id="customSwitcltr" type="checkbox" onclick="Rtl()">
                                 <label id="rtl" class="custom-control-label" for="customSwitcltr">direction</label>
                             </div>
+                        </div>
+                      </div>
 
-
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown ml-1 mr-1">
+                        </li> 
+                        <li class="nav-item dropdown ml-1 mr-1">
                         </li>
-
                     </ul>
                     <!--end Left Side Of Navbar -->
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -78,11 +86,14 @@
                             @endif
 
                         @else
+
+
                             <li class="nav-item dropdown">
 
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                        <img src="{{Auth::user()->avatar }}" width="50" class="rounded-circle border-0">
+                                    {{ Auth::user()->first_name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -109,16 +120,14 @@
         </nav> <!-- navbar -->
 
         <main class="py-4">
-            @yield('content')
+ @yield('content')
+
         </main>
 
 
 
     </div>
 
-   <!-- Scripts -->
-   <script src="{{ asset('js/app.js') }}" defer></script>
-   <script src="{{ asset('js/script.js') }}" defer></script>
 
    <footer class="py-5 bg-light text-center">
 
@@ -134,6 +143,13 @@
     </ul>
 </div>
    </footer>
+
+
+
+
+   <!-- Scripts -->
+   <script src="{{ asset('js/app.js') }}" defer></script>
+   <script src="{{ asset('js/script.js') }}" defer></script>
 
 </body>
 

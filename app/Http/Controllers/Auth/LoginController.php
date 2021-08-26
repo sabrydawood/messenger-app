@@ -19,24 +19,21 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    // public function authenticate(Request $request)
-    // {
-    //     $credentials = $request->validate([
-    //         'email' => ['required', 'email'],
-    //         'password' => ['required'],
-    //     ]);
 
-    //     if (Auth::attempt($credentials)) {
-    //         $request->session()->regenerate();
+    protected function authenticated(Request $request, $user)
+    {
+        // to admin dashboard
+        if($user->isAdmin()) {
+            return redirect(route('home'));
+        }
 
-    //         return redirect()->intended('home');
-    //     }
+        // to user dashboard
+        else if($user->isUser()) {
+            return redirect(route('home'));
+        }
 
-    //     return back()->withErrors([
-    //         'email' => 'The provided credentials do not match ',
-    //     ]);
-    // }
-
+        abort(404);
+    }
 
 
 }

@@ -19,18 +19,20 @@ use App\Http\Controllers\Profile;
 Route::get('/', function () {
     return view('welcome');
 });
-
-// Route::get('/{lang}', function ($lang) {
-//     App::setlocale($lang);
-//     return view('home');
-// });
-
-
 Auth::routes();
 
+
+
+// user protected routes
+Route::group(['middleware' => ['auth', 'user'], 'prefix' => 'user'], function () {
+    Route::get('/', 'HomeController@index')->name('home');
+});
+// admin protected routes
+Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function () {
+    Route::get('/', 'HomeController@index')->name('home');
+});
+
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-
 
 // profile
 Route::get('/user', [Profile::class, 'index'])->name('user');

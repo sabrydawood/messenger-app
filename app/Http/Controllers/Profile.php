@@ -15,7 +15,6 @@ class Profile extends Controller
     public function index()
     {
         $user = Auth::user();
-        // $user = User:: all();
         return view('user.index', compact('user'));
     }
 

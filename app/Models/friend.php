@@ -9,10 +9,11 @@ class Friend extends Model
 {
     use HasFactory;
     public $fillable = [
-        'first_name',
-        'middle_name',
-        'last_name',
-        'phone',
-        'email',
+        'user_id',
     ];
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
