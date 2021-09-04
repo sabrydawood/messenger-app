@@ -12,4 +12,9 @@ class Block_list extends Model
         'user_id',
         'participant_id',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

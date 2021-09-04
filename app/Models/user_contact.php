@@ -14,4 +14,8 @@ class User_contact extends Model
         'first_name',
         'last_name',
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

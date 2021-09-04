@@ -19,4 +19,8 @@ protected $dates = ['deleted_at'];
         'creator_id',
         'channel_id',
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

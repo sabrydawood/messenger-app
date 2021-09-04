@@ -14,4 +14,8 @@ class Activities extends Model
         'title',
         'detail',
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

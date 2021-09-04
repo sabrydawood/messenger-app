@@ -60,12 +60,6 @@ class RegisterController extends Controller
         ]);
     }
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\Models\User
-     */
     protected function create(array $data)
     {
         return User::create([
@@ -74,16 +68,8 @@ class RegisterController extends Controller
             'phone' => $data['phone'],
             'email' => $data['email'],
             'country' => $data['country'],
-            // 'friend' => $data['friend'],
             'password' => Hash::make($data['password']),
         ]);
     }
 
-    // public function country()
-    // {
-
-    //     $countries = CountryListFacade::getList('en');
-
-    //     return view('register', compact('countries'));
-    // }
 }

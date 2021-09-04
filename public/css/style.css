@@ -7,10 +7,13 @@
     box-sizing: border-box;
 }
 
-
+hr{
+ border-top: 1px solid #ee09c8;
+}
 
 
 /* auto complete for register contry */
+
 .autocomplete {
     position: relative;
     display : inline-block;
@@ -41,6 +44,7 @@ input[type=submit] {
     top : 100%;
     left: 0;
     right: 0;
+
 }
 
 .autocomplete-items div {
@@ -72,7 +76,9 @@ ul {
 .bg-silver {
     background-color: silver !important;
 }
-
+.w-20{
+    width: 20% !important;
+}
 .w-85 {
     width: 85% !important;
 }
@@ -119,10 +125,6 @@ ul {
     position: relative;
 }
 
-
-
-
-
 @media (max-width: 800px) {
     .noCredits h2:after{
         content: "";
@@ -156,20 +158,82 @@ ul {
     cursor  : pointer;
 }
 
-.burst-logo {
-    top: 3px;
-    position: absolute;
-    left: 52%;
-    margin-left: -50px!important;
-    display: block;
-}
+
 footer{
     border-top: solid 5px #27dab3;
 }
-.sidebar{
-    border: solid 2px rgba(12, 223, 230, 0.4);
+.homePostImage{
+    background-color: #6beed2;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+    .burst-logo {
+        top: 3px;
+        position: absolute;
+        left: 52%;
+        margin-left: -50px!important;
+        display: block;
+        animation: user-logo-spin infinite 20s linear;
+        -webkit-animation: user-logo-spin infinite 20s linear;
+}
+
+  }
+
+  @keyframes user-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+  ::-webkit-scrollbar-thumb {
+     width: 5px;
+    background: rgba(66, 228, 233, 0.659);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    width: 20px;
+    background: #f07979;
+  }
+
+.sidebar{
+    border: solid 2px rgba(12, 223, 230, 0.4);
+    overflow-x: hidden;
+    overflow-y: auto ;
+}
+
+.sidebar::-webkit-scrollbar {
+     width: 12px;
+ }
+
+ .sidebar::-webkit-scrollbar-track {
+     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+     border-radius: 10px;
+ }
+
+ .sidebar::-webkit-scrollbar-thumb {
+     border-radius: 10px;
+     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+ }
+ .sidebar::-webkit-scrollbar-thumb:hover {
+    width: 20px;
+    background: #73a8ed;
+  }
+
+.timer , .homePostLink{
+    font-size: 3px !important;
+}
 
 /* animation  */
 @media (max-width: 800px) {
@@ -248,4 +312,113 @@ footer{
     -webkit-transition : all .2s ease-out;
     -o-transition      : all .2s ease-out;
     transition         : all .2s ease-out;
+}
+
+.homeImagePost{
+    position: relative;
+}
+.PostCaegory{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    background: #6beed2;
+    padding: 5px;
+}
+.PostContent{
+    position: absolute;
+    bottom: 30%;
+    left: 20%;
+    background: #6beed2;
+    padding: 5px;
+}
+.PostedBy{
+    position: absolute;
+    bottom: 5%;
+    left: 20%;
+    background: #6beed2;
+    padding: 5px;
+}
+.PostInfo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 5;
+    box-sizing: border-box;
+    padding: 100px 15px;
+}
+.PostImage{
+        width: 100%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.navigation-tab{
+height: 100px;
+width:300px;
+overflow: hidden;
+display:flex;
+flex-shrink:0;
+position:relative;
+background-color: #3B3134;
+}
+.tab-icon img{
+    height: 32px;
+    width: 32px;
+}
+.tab-item{
+    display: flex;
+    text-align:center;
+    flex-direction:column;
+    width: 65px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    position:relative;
+    z-index: 2;
+
+}
+.tab-icon{
+    transform: translate(0px.5.5px);
+}
+.nav-text{
+    opacity:0;
+    transform: translate(0, 10px);
+    -webkit-transform: translate(0, 10px);
+    -moz-transform: translate(0, 10px);
+    -ms-transform: translate(0, 10px);
+    -o-transform: translate(0, 10px);
+}
+.tab-overlay{
+    height: 100%;
+    width: 105px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition:0.3s;
+    background-color:#f7ccaf;
+}
+.tab-icon{ 
+    line-height: 1;
+    transition-duration: 0.3s;
+    transform: translate(0 ,11px); 
+}
+.nav-text{
+    display: block;
+    font-size:15px;
+    font-weight: border;
+    text-transform: capitalize;
+    transition-duration: 0.3s;
+    transform: translate(0 ,20px);
+    -webkit-transform: translate(0 ,20px);
+    -moz-transform: translate(0 ,20px);
+    -ms-transform: translate(0 ,20px);
+    -o-transform: translate(0 ,20px);
+    user-select: none;
 }

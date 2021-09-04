@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Message extends Model
 {
-    use HasFactory;
+use HasFactory;
 use SoftDeletes;
 protected $dates = ['deleted_at'];
     public $fillable = [
@@ -19,8 +19,12 @@ protected $dates = ['deleted_at'];
         'message',
     ];
 
-    public function UserMessages()
+    public function user()
     {
-        return $this->hasMany(Message::class);
+        return $this->belongsTo(User::class);
+    }
+    protected function attachment()
+    {
+        return $this->hasMany(Attachment::class);
     }
 }

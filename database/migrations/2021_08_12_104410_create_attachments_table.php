@@ -15,9 +15,9 @@ class CreateAttachmentsTable extends Migration
     {
         Schema::create('attachments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('message_id')->references('id')->on('messages');
-            $table->string('thumb_Url');
-            $table->string('file_Url');
+            $table->foreignId('user_id')->references('id')->on('users');
+            $table->string('thumb_Url')->nullable();
+            $table->string('file_Url')->nullable();
             $table->timestamps();
         });
     }

@@ -12,4 +12,9 @@ class User_verifiction extends Model
         'user_id',
         'verification_code',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

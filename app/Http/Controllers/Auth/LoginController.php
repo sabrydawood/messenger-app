@@ -20,20 +20,20 @@ class LoginController extends Controller
     }
 
 
-    protected function authenticated(Request $request, $user)
-    {
-        // to admin dashboard
-        if($user->isAdmin()) {
-            return redirect(route('home'));
-        }
 
-        // to user dashboard
-        else if($user->isUser()) {
-            return redirect(route('home'));
-        }
+    // public function authenticated(Request $request, $user)
+    // {
+    //     // to admin dashboard
+    //     if($user->isAdmin()) {
+    //        return redirect()->route('admin.home');
+    //     }
 
-        abort(404);
-    }
+    //     // to user dashboard
+    //     else if($user->isUser()) {
+    //         return redirect()->route('user.home');
+    //     }
+    //     abort(404);
+    // }
 
 
 }

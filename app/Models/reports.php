@@ -15,4 +15,8 @@ class Reports extends Model
         'report_message',
         'status',
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

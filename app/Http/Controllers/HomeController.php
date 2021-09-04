@@ -13,15 +13,19 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
-
-
-
-
     public function index()
     {
-        $user = Auth::user();
-        $friends = Friend:: all();
-        
-        return view('home', compact('user' , 'friends'));
+        return view('home');
+
     }
+    public function private()
+    {
+        return view('private');
+    }
+
+    public function users()
+    {
+        return User::all();
+    }
+
 }
